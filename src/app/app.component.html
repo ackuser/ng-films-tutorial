@@ -2,10 +2,12 @@
 <button (click)="showCounter=!showCounter">Toggle counter</button>
 <button (click)="increment()">Increment counter</button>
 <today></today>
+<br/>
+<button (click)="addMenInBlackII()">Add Men In BlackII</button>
 <div class="container">
     <div class="card-deck-wrapper">
         <div class="card-deck">
-            <film *ngFor="let film of films" [data]="film" (onRemove)="remove($event)"></film>
+            <film *ngFor="let film of films | sortBy: 'name'" [data]="film" (onRemove)="remove($event)"></film>
         </div>
     </div>
 </div>

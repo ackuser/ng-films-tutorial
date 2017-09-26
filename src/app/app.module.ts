@@ -7,6 +7,7 @@ import { FilmComponent } from './shared/film.component'; // <-- Importamos el co
 import { MyShadowDirective } from './shared/myShadow.directive';
 import { CounterComponent } from './counter/counter.component'; // <-- Importamos la directiva
 import { CapitalizeFirstPipe } from './shared/capitalize-first.pipe';
+import { SortByPipe } from './shared/sortBy.pipe';
 import { TodayComponent } from './today/today.component'; // <-- Importamos el pipe
 
 @NgModule({
@@ -16,6 +17,7 @@ import { TodayComponent } from './today/today.component'; // <-- Importamos el p
     MyShadowDirective,
     CounterComponent,
     CapitalizeFirstPipe,
+    SortByPipe,
     TodayComponent
   ],
   imports: [

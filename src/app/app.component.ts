@@ -40,6 +40,16 @@ export class AppComponent {
     }
 
 
+    addMenInBlackII(){
+        this.films.push({
+            name: 'Men in Black II',
+            gender: 'Action',
+            language: 'English',
+            valoracion: 5,
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNDA0NTMxMV5BMl5BanBnXkFtZTYwMDE2NzY2._V1_.jpg',
+            imdbUrl: 'http://www.imdb.com/title/tt0120912/'
+        });
+    }
 
     remove(film) {
         if (window.confirm(`¿Seguro que quiere borrar la pelicula ${film.name}?`)){
