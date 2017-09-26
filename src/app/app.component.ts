@@ -23,6 +23,7 @@ export class AppComponent {
         {
             name: 'Mascotas',
             gender: 'Comedia',
+            language: 'English',
             image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzA1OTkzNV5BMl5BanBnXkFtZTgwODE3MjM4NzE@._V1_UX182_CR0,0,182,268_AL_.jpg',
             imdbUrl: 'http://www.imdb.com/title/tt2709768/'
         }
