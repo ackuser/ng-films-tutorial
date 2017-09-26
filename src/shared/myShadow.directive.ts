@@ -1,15 +1,18 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
     selector:'[my-shadow]'
 })
 export class MyShadowDirective {
 
+    @Input() color: string
+
     el: ElementRef = null
 
     constructor(el: ElementRef) {
         this.el = el;
-        this.setShadow('2px 2px 10px #ccc')
+        this.color = this.color || '#ccc'; // chequeamos que tengamos un valor valido
+        this.setShadow(`2px 2px 10px ${this.color}`);
     }
 
     setShadow(shadow) {
@@ -22,6 +25,6 @@ export class MyShadowDirective {
     }
     @HostListener('mouseleave')
     onMouseLeave(){
-        this.setShadow('2px 2px 10px #ccc');
+        this.setShadow(`2px 2px 10px ${this.color}`);
     }
 }
