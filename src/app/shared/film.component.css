@@ -27,7 +27,7 @@ p {
 
 @font-face {
     font-family: myFirstFont;
-    src: url(../assets/So_Far_So_Good.ttf);
+    src: url(../../assets/So_Far_So_Good.ttf);
 }
 
 .myOwnTypography{

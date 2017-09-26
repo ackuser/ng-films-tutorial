@@ -33,6 +33,12 @@ export class AppComponent {
         }
     ]
 
+    num: number = 0
+    showCounter: boolean = true
+    increment() {
+        this.num++;
+    }
+
 
 
     remove(film) {
