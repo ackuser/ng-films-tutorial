@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
     selector:'[my-shadow]'
@@ -11,6 +11,11 @@ export class MyShadowDirective {
 
     constructor(el: ElementRef) {
         this.el = el;
+        this.color = this.color || '#ccc'; // chequeamos que tengamos un valor valido
+        this.setShadow(`2px 2px 10px ${this.color}`);
+    }
+
+    ngOnInit() {
         this.color = this.color || '#ccc'; // chequeamos que tengamos un valor valido
         this.setShadow(`2px 2px 10px ${this.color}`);
     }
