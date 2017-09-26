@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [style.background]="'antiquewhite'">
     <img class="card-img-top" [src]="data.image" [alt]="data.name">
     <div class="card-block">
         <a [href]="data.imdbUrl">
@@ -9,7 +9,7 @@
         </ul>
         <ul class="list-group list-group-flush" [ngSwitch]="data.language">
             <!-- <li class="list-group-item">Genero: {{data.gender}}</li> -->
-            <li class="list-group-item" *ngSwitchCase="'English'">English</li>
+            <li class="list-group-item" *ngSwitchCase="'English'" [ngStyle]="{'background': 'aliceblue'}">English</li>
             <li class="list-group-item" *ngSwitchCase="'Spanish'">Español</li>
             <li class="list-group-item" *ngSwitchDefault>Other</li>
         </ul>
