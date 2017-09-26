@@ -3,3 +3,33 @@ img {
     margin: 10px auto 0 auto;
     max-height: 120px;
 }
+
+.boldText {
+    font-weight: bold;
+}
+
+
+p {
+    text-align: center;
+}
+
+.loveit {
+    font-size: -webkit-xxx-large;
+    color: lime;
+}
+
+
+.nottoogood {
+    font-size: normal;
+    color: red;
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../assets/So_Far_So_Good.ttf);
+}
+
+.myOwnTypography{
+    font-family: myFirstFont;
+}

@@ -2,7 +2,8 @@
     <img class="card-img-top" [src]="data.image" [alt]="data.name">
     <div class="card-block">
         <a [href]="data.imdbUrl">
-            <h4 class="card-title">{{data.name}}</h4></a>
+            <h4 class="card-title" ngClass="myOwnTypography">{{data.name}}</h4></a>
+            <!-- <h4 class="card-title" [ngClass]="'myOwnTypography'">{{data.name}}</h4></a> -->
         </div>
         <ul class="list-group list-group-flush" *ngIf="data?.gender">
             <li class="list-group-item">Genero: {{data.gender}}</li>
@@ -10,11 +11,11 @@
         <ul class="list-group list-group-flush" [ngSwitch]="data.language">
             <!-- <li class="list-group-item">Genero: {{data.gender}}</li> -->
             <li class="list-group-item" *ngSwitchCase="'English'" [ngStyle]="{'background': 'aliceblue'}">English</li>
-            <li class="list-group-item" *ngSwitchCase="'Spanish'">Español</li>
+            <li class="list-group-item" *ngSwitchCase="'Spanish'" [class.boldText]="data.language === 'Spanish'">Español</li>
             <li class="list-group-item" *ngSwitchDefault>Other</li>
         </ul>
         <!-- </div> -->
-
+        <p [ngClass]="{loveit: data.valoracion > 1, nottoogood: data.valoracion <= 1}">&hearts;</p>
 
         <div class="card-block">
             <a href="#" class="btn btn-primary" (click)="remove()">Eliminar</a>
