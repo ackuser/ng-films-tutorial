@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FilmComponent } from '../shared/film.component'; // <-- Importamos el componente
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule
