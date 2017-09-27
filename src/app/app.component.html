@@ -1,9 +1,14 @@
 <counter [count]="num" *ngIf="showCounter"></counter>
-<button (click)="showCounter=!showCounter">Toggle counter</button>
-<button (click)="increment()">Increment counter</button>
+<button md-raised-button color="primary" (click)="showCounter=!showCounter">Toggle counter</button>
+<button md-raised-button color="accent" (click)="increment()">Increment counter</button>
+
+<br/><br/><br/><br/>
+
 <today></today>
-<br/>
-<button (click)="addMenInBlackII()">Add Men In BlackII</button>
+
+<br/><br/><br/><br/>
+
+<button md-raised-button color="warn" (click)="addMenInBlackII()">Add Men In BlackII</button>
 <div class="container">
     <div class="card-deck-wrapper">
         <div class="card-deck">

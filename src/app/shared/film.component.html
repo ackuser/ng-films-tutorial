@@ -1,23 +1,20 @@
-<div class="card" [style.background]="'antiquewhite'" my-shadow [color]="'#1976D2'">
-    <img class="card-img-top" [src]="data.image" [alt]="data.name">
-    <div class="card-block">
-        <a [href]="data.imdbUrl">
-            <h4 class="card-title" ngClass="myOwnTypography">{{data.name | capitalizeFirst}}</h4></a>
-            <!-- <h4 class="card-title" [ngClass]="'myOwnTypography'">{{data.name}}</h4></a> -->
-        </div>
-        <ul class="list-group list-group-flush" *ngIf="data?.gender">
-            <li class="list-group-item">Genero: {{data.gender}}</li>
-        </ul>
-        <ul class="list-group list-group-flush" [ngSwitch]="data.language">
-            <!-- <li class="list-group-item">Genero: {{data.gender}}</li> -->
-            <li class="list-group-item" *ngSwitchCase="'English'" [ngStyle]="{'background': 'aliceblue'}">English</li>
-            <li class="list-group-item" *ngSwitchCase="'Spanish'" [class.boldText]="data.language === 'Spanish'">Español</li>
-            <li class="list-group-item" *ngSwitchDefault>Other</li>
-        </ul>
-        <!-- </div> -->
-        <p [ngClass]="{loveit: data.valoracion > 1, nottoogood: data.valoracion <= 1}">&hearts;</p>
-
-        <div class="card-block">
-            <a href="#" class="btn btn-primary" (click)="remove()">Eliminar</a>
-        </div>
-</div>
+<md-card class="example-card" [style.background]="'#ecf0f1'" my-shadow [color]="'#1976D2'">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title ngClass="myOwnTypography">{{data.name | capitalizeFirst}}</md-card-title>
+    <md-card-subtitle *ngIf="data?.gender">{{data.gender}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image [src]="data.image" [alt]="data.name">
+  <md-card-content>
+      <div [ngSwitch]="data.language">
+          <!-- <li class="list-group-item">Genero: {{data.gender}}</li> -->
+          <p *ngSwitchCase="'English'" [ngStyle]="{'background': 'aliceblue'}">English</p>
+          <p *ngSwitchCase="'Spanish'" [class.boldText]="data.language === 'Spanish'">Español</p>
+          <p *ngSwitchDefault>Other</p>
+      </div>
+    <i [ngClass]="{loveit: data.valoracion > 1, nottoogood: data.valoracion <= 1}" class="material-icons">favorite_border</i>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary" (click)="remove()">Eliminar</button>
+  </md-card-actions>
+</md-card>

@@ -40,3 +40,5 @@ https://blog.thoughtram.io/angular/2016/10/13/two-way-data-binding-in-angular-2.
 https://jaxenter.com/angular-4-top-features-133165.html
 
 https://angular.io/api/common/NgComponentOutlet
+
+https://www.typescriptlang.org/docs/handbook/compiler-options.html

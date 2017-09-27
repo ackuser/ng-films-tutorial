@@ -5,8 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core'; // <- Importamos Pipe y
     pure: false
 })
 export class SortByPipe implements PipeTransform {
-    transform(value: Array<any>, typeSort: String) {
-        debugger
+    transform(value: Array<any>, typeSort: String) {        
         console.log(typeSort);
         if(typeSort)
         {
