@@ -10,6 +10,7 @@
 
 <button md-raised-button color="warn" (click)="addMenInBlackII()">Add Men In BlackII</button>
 <div class="container">
+    <film-form></film-form> <!-- Añadimos el formulario -->
     <div class="card-deck-wrapper">
         <div class="card-deck">
             <film *ngFor="let film of films | sortBy: 'name'" [data]="film" (onRemove)="remove($event)"></film>

@@ -13,11 +13,16 @@ import { TodayComponent } from './today/today.component'; // <-- Importamos el p
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // import { MaterialModule } from '@angular/material';
-import {MdButtonModule, MdCheckboxModule, MdCardModule} from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdCardModule } from '@angular/material';
+
+import { FormsModule }   from '@angular/forms';
 
 import { FilmService } from './services/film.service';
 
 import { API_CONFIG, config } from './config';
+
+import { FilmFormComponent } from './shared/film-form/film-form.component';
+
 
 @NgModule({
   declarations: [
@@ -27,11 +32,13 @@ import { API_CONFIG, config } from './config';
     CounterComponent,
     CapitalizeFirstPipe,
     SortByPipe,
-    TodayComponent
+    TodayComponent,
+    FilmFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     // MaterialModule
     MdButtonModule, MdCheckboxModule, MdCardModule
   ],
