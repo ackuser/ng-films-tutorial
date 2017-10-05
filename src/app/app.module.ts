@@ -15,6 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MaterialModule } from '@angular/material';
 import {MdButtonModule, MdCheckboxModule, MdCardModule} from '@angular/material';
 
+import { FilmService } from './services/film.service';
+
+import { API_CONFIG, config } from './config';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,13 @@ import {MdButtonModule, MdCheckboxModule, MdCardModule} from '@angular/material'
     // MaterialModule
     MdButtonModule, MdCheckboxModule, MdCardModule
   ],
-  providers: [],
+  providers: [
+    // FilmService
+    {provide: FilmService, useClass: FilmService}
+    // {provide: FilmService, useClass: FilmWithLogService}
+    // {provide: OldFilmService, useExisting: FilmWithLogService}
+    ,{ provide: API_CONFIG, useValue: config } // <- Registramos el valor
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
